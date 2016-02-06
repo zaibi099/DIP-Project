@@ -1,0 +1,8 @@
+edgi = edge(im,'prewitt',[],'both');
+edgi = imdilate(edgi,[1 1 1;1 1 1;1 1 1]);
+figure; imshow(edgi);
+
+threshold = graythresh(im);
+BW = im2bw(im, threshold);
+
+
